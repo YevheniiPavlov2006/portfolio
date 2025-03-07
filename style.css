@@ -6,6 +6,8 @@
   --white-1000: #ffffff;
   --braun-main: #78490f;
   --gray-color: #818181;
+
+  --gray-light: #d0d0d0;
 }
 
 *{   
@@ -278,6 +280,9 @@ a {
 .sector-about {
   position: relative;
 }
+.about-title {
+  margin-bottom: 50px;
+}
 .container-about {
   padding: 100px;
   padding-bottom: 0;
@@ -290,19 +295,67 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 60px;
 }
 .about-contant {
   margin-top: 0;
   z-index: 50;
 }
 .about-img {
-  width: 50%;
+  width: 45%;
+  aspect-ratio: 1;
+
+  position: relative;
+  z-index: 20;
+}
+.about-img img {
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 10;
+
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--gray-color);
+
+  position: relative;
+}
+
+.about-img-style {
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50% 0 0 0;
+  background-color: var(--gray-light);
+  top: -50px;
+  left: -40px;
+  position: absolute;
+  z-index: 2;
+}
+
+.about-img-style1 {
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 40% 0 40% 0;
+  background-color: var(--gray-light);
+  bottom: -30px;
+  right: 10px;
+  position: absolute;
+  z-index: 2;
 }
 
 
 
 
 @media(max-width:1200px){
+  .about-img-style {
+    width: 120px;
+    top: -30px;
+    left: -30px;
+  }
+  .about-img-style1 {
+    width: 100px;
+    bottom: -40px;
+  }
   .sector-about {
     margin: 50px 0;
   }
@@ -333,6 +386,18 @@ a {
   }
 }
 @media(max-width:1000px){
+  .about-img {
+    width: 60%;
+    margin-top: -30px;
+  }
+  .about-img-style {
+    width: 100px;
+  }
+  .about-img-style1 {
+    bottom: -30px;
+    right: 10px;
+    width: 80px;
+  }
   .main-contant {
     font-size: 18px;
     margin-left: 20px;
@@ -375,10 +440,29 @@ a {
     font-size: 14px;
   }
   .lines {
-    top: -100px;
+    top: -120px;
   }
 }
 @media(max-width:800px){
+  .about-title {
+    margin-bottom: 20px;
+  }
+  .about-body {
+    gap: 15px;
+  }
+  .about-contant {
+    width: 70%;
+  }
+  .about-img-style {
+    width: 60px;
+    top: -10px;
+    left: -10px;
+  }
+  .about-img-style1 {
+    width: 60px;
+    right: 10px;
+    bottom: -10px;
+  }
   .container-home {
     gap: 20px;
     align-items: center;
@@ -406,22 +490,37 @@ a {
     font-size: 12px;
   }
   .lines {
-    top: -150px;
+    top: -250px;
   }
 }
 @media(max-width:600px){
+  .about-contant {
+    width: 100%;
+  }
   .main-panel{
     margin: 40px 0;
+  }
+  .about-title {
+    margin-bottom: 70px;
+  }
+  .about-img-style {
+    width: 140px;
+    top: -35px;
+  }
+  .about-img-style1 {
+    width: 140px;
+    bottom: -70px;
+    right: -30px;
   }
   .main-contant {
     font-size: 22px;
   }
   .about-body {
     flex-direction: column-reverse;
-    gap: 20px;
+    gap: 70px;
   }
   .about-img {
-    width: 100%;
+    width: 90%;
   }
   .container-home {
     flex-direction: column;
@@ -462,6 +561,19 @@ a {
   .sector-about {
     margin: 30px 0;
   }
+  .about-body {
+    gap: 80px;
+  }
+  .about-img-style {
+    width: 100px;
+    top: -30px;
+    left: -10px;
+  }
+  .about-img-style1 {
+    width: 100px;
+    bottom: -30px;
+    right: -10px;
+  }
   .container-about {
     padding: 0 20px;
   }
@@ -493,6 +605,14 @@ a {
   .home--contant-contacts {
     font-size: 16px;
     padding: 10px 26px;
+  }
+}
+@media(max-width:400px){
+  .about-img-style {
+    width: 80px;
+  }
+  .about-img-style1 {
+    width: 80px;
   }
 }
 
@@ -709,7 +829,7 @@ a {
 }
 .container-contacts {
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 0px !important;
 }
 .logo-footer {
   font-size: 30px;
@@ -729,7 +849,7 @@ a {
 .footer-contacts-block {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .footer-contacts-media {
   display: flex;
@@ -737,7 +857,7 @@ a {
   z-index: 40;
 }
 .sm-img {
-  width: 60px;
+  width: 70px;
   aspect-ratio: 1;
   cursor: pointer;
   z-index: 50;
@@ -825,6 +945,13 @@ a {
   }
 }
 @media(max-width:600px){
+  .container-contacts {
+    padding-top: 50px;
+    padding-bottom: 0px !important;
+  }
+  .footer-block {
+    padding-bottom: 20px;
+  }
   .footer-number {
     font-size: 14px;
   }
@@ -833,9 +960,6 @@ a {
   }
   .footer-contacts-block {
     gap: 10px;
-  }
-  .footer-block {
-    padding-bottom: 0;
   }
   .footer--menu a {
     font-size: 16px;
