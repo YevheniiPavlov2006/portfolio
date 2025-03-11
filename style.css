@@ -1601,8 +1601,8 @@ a {
 
 .p-grig-49 {
   background-image: url(Personal-photos/IMG_0664.JPEG);
-  grid-row-start: 13;
-  grid-row-end: 15;
+  grid-row-start: 12;
+  grid-row-end: 14;
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -1614,8 +1614,8 @@ a {
     grid-column-end: 4;
   }
   .p-grig-49 {
-    grid-row-start: 18;
-    grid-row-end: 20;
+    grid-row-start: 16;
+    grid-row-end: 18;
     grid-column-start: 1;
     grid-column-end: 3;
   }
